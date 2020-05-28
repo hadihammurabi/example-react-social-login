@@ -30,7 +30,7 @@ export default () => {
   return (
     <div>
       <GoogleLogin
-        clientId="153968427944-thten0p7sgls2h6sctphggpfqmhvujr1.apps.googleusercontent.com"
+        clientId={store.googleClientId}
         // buttonText="Login"
         onSuccess={onResponse}
         onFailure={onResponse}

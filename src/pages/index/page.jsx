@@ -28,7 +28,7 @@ export default () => {
 
           <br/>
           <GoogleLogout
-            clientId='153968427944-thten0p7sgls2h6sctphggpfqmhvujr1.apps.googleusercontent.com'
+            clientId={store.googleClientId}
             // buttonText="Logout"
             onLogoutSuccess={onResponse}
           />
