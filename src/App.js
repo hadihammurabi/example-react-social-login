@@ -6,9 +6,9 @@ import LoginPage from './pages/login';
 import store from './store';
 
 const secure = (Page) => {
-  return () => {
-    if (store.isLogin) {
-      return <Page />;
+  return (props) => {
+    if (store.user?.accessToken) {
+      return <Page {...props} />;
     }
 
     return <Redirect to="/login" />;

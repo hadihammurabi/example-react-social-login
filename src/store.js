@@ -1,7 +1,9 @@
 import { observable } from 'mobx';
 
+const userFromSession = sessionStorage.getItem('user');
+
 const store = observable({
-  isLogin: false,
+  user: userFromSession ? JSON.parse(userFromSession) : null,
 });
 
 export default store;
