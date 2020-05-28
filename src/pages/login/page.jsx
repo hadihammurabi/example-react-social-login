@@ -15,7 +15,7 @@ export default () => {
 
     const user = res.profileObj;
     user.accessToken = res.accessToken;
-    store.isLogin = true;
+    user.provider = 'google';
     store.user = user;
 
     sessionStorage.setItem("user", JSON.stringify(user));
